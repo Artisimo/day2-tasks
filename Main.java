@@ -59,6 +59,11 @@ public class Main {
             return true;
         }
     }
+
+    static void printOppositeBoolean(boolean b){
+        boolean result = !b;
+        System.out.println('\n' + "Opposite of " + b + " is " + result);
+    }
     public static void main(String[] args) {
 
         compare(10,10);
@@ -66,6 +71,10 @@ public class Main {
         System.out.println('\n' + "Is b1 and b2 equal? - " + areBooleansEqual(true, false));
 
         System.out.println('\n' + "Is 20 even? - " + isNumberEven(20));
+
         System.out.println('\n' + "Is 20 odd? - " + isNumberOdd(20));
+        
+        printOppositeBoolean(true);
+
     }
 }
