@@ -44,10 +44,28 @@ public class Main {
         }
     }
 
+    static boolean isNumberEven(int n){
+        if(n % 2 == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    static boolean isNumberOdd(int n){
+        if(n % 2 == 0){
+            return false;
+        }else{
+            return true;
+        }
+    }
     public static void main(String[] args) {
 
         compare(10,10);
 
         System.out.println('\n' + "Is b1 and b2 equal? - " + areBooleansEqual(true, false));
+
+        System.out.println('\n' + "Is 20 even? - " + isNumberEven(20));
+        System.out.println('\n' + "Is 20 odd? - " + isNumberOdd(20));
     }
 }
