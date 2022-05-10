@@ -9,31 +9,11 @@ public class Main {
         System.out.println("Enter value b: ");
         int b = getUserInputInt();
 
-        boolean isEqual = false;
-        boolean isLessThan = false;
-        boolean isLessOrEqual = false;
-        boolean isGreater = false;
-        boolean isGreaterOrEqual = false;
-
-        if(a == b){
-            isEqual = true;
-        }
-
-        if(a < b){
-            isLessThan = true;
-        }
-
-        if(a <= b){
-            isLessOrEqual = true;
-        }
-
-        if(a > b){
-            isGreater = true;
-        }
-
-        if(a >= b){
-            isGreaterOrEqual = true;
-        }
+        boolean isEqual = a == b;
+        boolean isLessThan = a < b;
+        boolean isLessOrEqual = a <= b;
+        boolean isGreater = a > b;
+        boolean isGreaterOrEqual = a >= b;
 
         System.out.println("Is " + a + " equal to " + b + "? - " + isEqual);
         System.out.println("Is " + a + " less than " + b + "? - " +  isLessThan);
@@ -120,6 +100,8 @@ public class Main {
         return myInput.nextBoolean();
     }
     public static void main(String[] args) {
+
+        System.out.println(10 == 10);
 
         compare();
 
