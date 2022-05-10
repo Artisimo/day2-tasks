@@ -36,8 +36,18 @@ public class Main {
         System.out.println("Is " + a + " greater or equal to " + b + "? - " + isGreaterOrEqual);
     }
 
+    static boolean areBooleansEqual(boolean b1, boolean b2){
+        if(b1 == b2){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
 
         compare(10,10);
+
+        System.out.println('\n' + "Is b1 and b2 equal? - " + areBooleansEqual(true, false));
     }
 }
