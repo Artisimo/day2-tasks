@@ -36,10 +36,11 @@ public class Main {
         }
 
         System.out.println("Is " + a + " equal to " + b + "? - " + isEqual);
-        System.out.println("Is " + a + " less than " + b + "? - " + isLessThan);
+        System.out.println("Is " + a + " less than " + b + "? - " +  isLessThan);
         System.out.println("Is " + a + " less or equal to " + b + "? - " + isLessOrEqual);
         System.out.println("Is " + a + " greater than " + b + "? - " + isGreater);
         System.out.println("Is " + a + " greater or equal to " + b + "? - " + isGreaterOrEqual);
+        System.out.println('\n');
     }
 
     static void areBooleansEqual(){
@@ -50,15 +51,17 @@ public class Main {
 
         boolean result;
         result = b1 == b2;
-        System.out.println('\n' + "Is "+  b1 + " and " + b2 + " equal? - " + result);
+        System.out.println("Is "+  b1 + " and " + b2 + " equal? - " + result);
+        System.out.println('\n');
     }
 
     static void isNumberEven(){
-
+        System.out.println("Enter int: ");
         int n = getUserInputInt();
         boolean result;
         result = n % 2 == 0;
-        System.out.println(result);
+        System.out.println("Is " + n + " even? - " + result);
+        System.out.println('\n');
     }
 
     static void isNumberOdd(){
@@ -66,14 +69,17 @@ public class Main {
         int n = getUserInputInt();
         boolean result;
         result = n % 2 != 0;
-        System.out.println(result);
+
+        System.out.println("Is " + n + " odd? - " + result);
+        System.out.println('\n');
     }
 
     static void printOppositeBoolean(){
-        System.out.println("Enter b1: ");
+        System.out.println("Enter boolean: ");
         boolean b = getUserInputBool();
         boolean result = !b;
-        System.out.println('\n' + "Opposite of " + b + " is " + result);
+        System.out.println("Opposite of " + b + " is " + result);
+        System.out.println('\n');
     }
 
     static void returnTrueOnCondition(){
@@ -92,15 +98,25 @@ public class Main {
             result =  false;
         }
         System.out.println(result);
+        System.out.println('\n');
     }
 
     static int getUserInputInt(){
+
         Scanner myInput = new Scanner( System.in );
+        while (!myInput.hasNextInt()) {
+            System.out.println("That's not a number!");
+            myInput.next();
+        }
         return myInput.nextInt();
     }
 
     static boolean getUserInputBool(){
         Scanner myInput = new Scanner( System.in );
+        while (!myInput.hasNextBoolean()) {
+            System.out.println("That's not a boolean!");
+            myInput.next();
+        }
         return myInput.nextBoolean();
     }
     public static void main(String[] args) {
