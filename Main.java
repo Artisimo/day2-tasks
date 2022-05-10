@@ -2,7 +2,13 @@ import java.lang.*;
 import java.util.*;
 public class Main {
 
-    static void compare(int a, int b){
+    static void compare(){
+
+        System.out.println("Enter value a: ");
+        int a = getUserInputInt();
+        System.out.println("Enter value b: ");
+        int b = getUserInputInt();
+
         boolean isEqual = false;
         boolean isLessThan = false;
         boolean isLessOrEqual = false;
@@ -36,58 +42,79 @@ public class Main {
         System.out.println("Is " + a + " greater or equal to " + b + "? - " + isGreaterOrEqual);
     }
 
-    static boolean areBooleansEqual(boolean b1, boolean b2){
-        if(b1 == b2){
-            return true;
-        }else{
-            return false;
-        }
+    static void areBooleansEqual(){
+        System.out.println("Enter b1: ");
+        boolean b1 = getUserInputBool();
+        System.out.println("Enter b2: ");
+        boolean b2 = getUserInputBool();
+
+        boolean result;
+        result = b1 == b2;
+        System.out.println('\n' + "Is "+  b1 + " and " + b2 + " equal? - " + result);
     }
 
-    static boolean isNumberEven(int n){
-        if(n % 2 == 0){
-            return true;
-        }else{
-            return false;
-        }
+    static void isNumberEven(){
+
+        int n = getUserInputInt();
+        boolean result;
+        result = n % 2 == 0;
+        System.out.println(result);
     }
 
-    static boolean isNumberOdd(int n){
-        if(n % 2 == 0){
-            return false;
-        }else{
-            return true;
-        }
+    static void isNumberOdd(){
+        System.out.println("Enter int: ");
+        int n = getUserInputInt();
+        boolean result;
+        result = n % 2 != 0;
+        System.out.println(result);
     }
 
-    static void printOppositeBoolean(boolean b){
+    static void printOppositeBoolean(){
+        System.out.println("Enter b1: ");
+        boolean b = getUserInputBool();
         boolean result = !b;
         System.out.println('\n' + "Opposite of " + b + " is " + result);
     }
 
-    static boolean returnTrueOnCondition(int a, int b){
+    static void returnTrueOnCondition(){
+        System.out.println("Enter value a: ");
+        int a = getUserInputInt();
+        System.out.println("Enter value b: ");
+        int b = getUserInputInt();
+        boolean result;
         if(a == b){
-            return true;
+            result =  true;
         }else if(a < 0 && b > 0){
-            return true;
+            result =  true;
         }else if(a > 100 && b > 100){
-            return true;
+            result = true;
         }else{
-            return false;
+            result =  false;
         }
+        System.out.println(result);
+    }
+
+    static int getUserInputInt(){
+        Scanner myInput = new Scanner( System.in );
+        return myInput.nextInt();
+    }
+
+    static boolean getUserInputBool(){
+        Scanner myInput = new Scanner( System.in );
+        return myInput.nextBoolean();
     }
     public static void main(String[] args) {
 
-        compare(10,10);
+        compare();
 
-        System.out.println('\n' + "Is b1 and b2 equal? - " + areBooleansEqual(true, false));
+        areBooleansEqual();
 
-        System.out.println('\n' + "Is 20 even? - " + isNumberEven(20));
+        isNumberEven();
 
-        System.out.println('\n' + "Is 20 odd? - " + isNumberOdd(20));
+        isNumberOdd();
 
-        printOppositeBoolean(true);
+        printOppositeBoolean();
 
-        System.out.println(returnTrueOnCondition(99, 200));
+        returnTrueOnCondition();
     }
 }
